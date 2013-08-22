@@ -12,7 +12,8 @@ theme.icon_dir                              = os.getenv("HOME") .. "/.config/awe
 
 --theme.wallpaper                             = os.getenv("HOME") .. "/.config/awesome/themes/msjche/gentoo-wallpaper.png"
 --theme.wallpaper                             = os.getenv("HOME") .. "/.config/awesome/themes/msjche/gentoo-wallpaper.jpg"
-theme.wallpaper                             = os.getenv("HOME") .. "/.config/awesome/themes/msjche/grey-gentoo.png"
+theme.wallpaper                             = os.getenv("HOME") .. "/.config/awesome/themes/msjche/gray-gentoo.png"
+--theme.wallpaper                             = os.getenv("HOME") .. "/.config/awesome/themes/msjche/linux-gentoo-gray.jpg"
 
 theme.topbar_path                           = "png:" .. theme.icon_dir .. "/topbar/"
 
