@@ -12,8 +12,9 @@ theme.icon_dir                              = os.getenv("HOME") .. "/.config/awe
 
 --theme.wallpaper                             = os.getenv("HOME") .. "/.config/awesome/themes/msjche/gentoo-wallpaper.png"
 --theme.wallpaper                             = os.getenv("HOME") .. "/.config/awesome/themes/msjche/gentoo-wallpaper.jpg"
-theme.wallpaper                             = os.getenv("HOME") .. "/.config/awesome/themes/msjche/gray-gentoo.png"
+--theme.wallpaper                             = os.getenv("HOME") .. "/.config/awesome/themes/msjche/gray-gentoo.png"
 --theme.wallpaper                             = os.getenv("HOME") .. "/.config/awesome/themes/msjche/linux-gentoo-gray.jpg"
+theme.wallpaper                             = os.getenv("HOME") .. "/.config/awesome/themes/msjche/abstract.jpg"
 
 theme.topbar_path                           = "png:" .. theme.icon_dir .. "/topbar/"
 
@@ -21,7 +22,7 @@ theme.font                                  = "Tamsyn 10"
 theme.taglist_font                          = "Tamsyn 8"
 theme.fg_normal                             = "#FFFFFF"
 theme.fg_focus                              = "#0099CC"
-theme.bg_normal                             = "#242424"
+theme.bg_normal                             = "#24242400"
 theme.fg_urgent                             = "#CC9393"
 theme.bg_urgent                             = "#2A1F1E"
 theme.border_width                          = "1"
@@ -33,10 +34,10 @@ theme.tasklist_bg_normal                    = "#222222"
 theme.tasklist_fg_focus                     = "#4CB7DB"
 theme.tasklist_bg_focus                     = "png:" .. theme.icon_dir .. "/bg_focus_noline.png"
 theme.textbox_widget_margin_top             = 1
-theme.awful_widget_height                   = 14
+theme.awful_widget_height                   = 20 
 theme.awful_widget_margin_top               = 2
-theme.menu_height                           = "16"
-theme.menu_width                            = "140"
+theme.menu_height                           = "20"
+theme.menu_width                            = "240"
 
 theme.widget_bg                             = theme.icon_dir .. "/bg_focus_noline.png"
 theme.awesome_icon                          = theme.icon_dir .. "/awesome_icon.png"
