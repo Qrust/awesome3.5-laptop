@@ -88,8 +88,8 @@ end
 -- {{{ Tags
 
 tags = 	{
-	names = { "1-WEB", "2-POR", "3-NEW", "4-WOR", "5-IRC", "6-MUS", "7-MOV", "8-PIR", "9-GAM", "10-DEV" },
-	layout = { layouts[10], layouts[7], layouts[8], layouts[1], layouts[2], layouts[3], layouts[12], layouts[7], layouts[1], layouts[1] }
+	names = { "1-WWW", "2-POR", "3-NEW", "4-IRC", "5-MIS", "6-PIR", "7-MOV", "8-GAM", "9-DEV" },
+	layout = { layouts[10], layouts[7], layouts[1], layouts[2], layouts[1], layouts[5], layouts[12], layouts[1], layouts[1] }
 		}
 for s = 1, screen.count() do
 	tags[s] = awful.tag(tags.names, s, tags.layout)
@@ -285,7 +285,7 @@ function (widget, args)
         bg = beautiful.bg_urgent })
         too_much = true
       end
-      return white .. " / " .. coldef .. blue .. args["{/ used_p}"] .. coldef .. "% " .. white .. " /home " .. coldef .. blue .. args["{/home used_p}"] .. coldef .. "%    "
+      return white .. " / " .. coldef .. blue .. args["{/ used_p}"] .. coldef .. "% " .. white .. " /home " .. coldef .. blue .. args["{/home used_p}"] .. coldef .. "%   "
   else
     return ""
   end
@@ -505,7 +505,7 @@ cpu_icon:set_image(beautiful.cpu)
 -- Initialize widget
 cpuwidget_graph = awful.widget.graph()
 --Graph properties
-cpuwidget_graph:set_width(80)
+cpuwidget_graph:set_width(50)
 cpuwidget_graph:set_background_color("#242424")
 cpuwidget_graph:set_color({ type = "linear", from = { 0, 0 }, to = { 10,0 }, stops = { {0, "#4CB7DB"}, {0.5, "#4CB7DB"}, 
 					{1, "#4CB7DB" }}})
@@ -571,7 +571,7 @@ yawn.register(2513768) -- https//github.com/copycat-killer/yawn
 
 -- Memory status
 memtxt = wibox.widget.textbox()
-vicious.register(memtxt, vicious.widgets.mem, white .. " MEM " .. coldef .. blue .. "$2 " ..coldef  .. white .. "MB    " .. coldef, 5)
+vicious.register(memtxt, vicious.widgets.mem, blue .. " MEM " .. coldef .. white .. "$2 " ..coldef  .. blue .. "mb    " .. coldef, 5)
 
 -- Memory graph
 
@@ -712,7 +712,7 @@ for s = 1, screen.count() do
     mywibox[s]:set_widget(layout)
 
     -- Create the bottom wibox
-    mybottomwibox[s] = awful.wibox({ position = "bottom", screen = s, border_width = 0, height = 32 })
+    mybottomwibox[s] = awful.wibox({ position = "bottom", screen = s, border_width = 0, height = 30 })
             
     -- Widgets that are aligned to the bottom left
     bottom_left_layout = wibox.layout.fixed.horizontal()
@@ -769,9 +769,9 @@ globalkeys = awful.util.table.join(
 	awful.key({ }, "XF86MonBrightnessDown", function ()
 	awful.util.spawn("sudo /home/msjche/scripts/brightnessdown.sh") end),
 	awful.key({ }, "XF86AudioRaiseVolume", function ()
-	awful.util.spawn("amixer set Master 5%+", false) end),
+	awful.util.spawn("amixer set Master 10%+", false) end),
 	awful.key({ }, "XF86AudioLowerVolume", function ()
-	awful.util.spawn("amixer set Master 5%-", false) end),
+	awful.util.spawn("amixer set Master 10%-", false) end),
 	awful.key({ }, "XF86AudioPlay", function ()
 	awful.util.spawn("mpc toggle", false) end),
 	awful.key({ }, "XF86AudioLowerVolume unmute", function ()
